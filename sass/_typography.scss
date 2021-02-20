@@ -1,0 +1,46 @@
+/////////////////////////
+/* HEADINGS */
+/////////////////////////
+
+%heading {
+  font-family: var(--fsecondary);
+  font-weight: 700;
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 5rem;
+  line-height: 5rem;
+
+  @include responsive(phone) {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 4rem;
+  line-height: 4rem;
+
+  @include responsive(phone) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+@include responsive(tab-land) {
+  .heading-2,
+  .heading-3 {
+    text-align: center;
+  }
+}
+
+.heading-4 {
+  font-family: var(--fprimary);
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  color: var(--lblue);
+  letter-spacing: -1px;
+}

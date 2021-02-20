@@ -1,0 +1,58 @@
+/////////////////////////
+/* MIXINS */
+/////////////////////////
+
+/* DESKTOP FIRST MEDIA QUERY 
+
+1440px {NORMAL STYLE}
+
+1200px - 900px [75em] {TABLET LANDSCAPE} [tab-land]
+
+900px - 600px [56.25em] {TABLET PORTRAIT} [tab-port]
+
+600px - 350px [37.5em] {NORMAL PHONE} [phone]
+
+350px - 280px [21.875em] {SMALL PHONE} [sphone]
+
+*/
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == sphone {
+    @media only screen and (max-width: 21.875em) {
+      @content;
+    }
+  }
+}
+
+/* FLEX */
+
+@mixin frow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin fcolumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

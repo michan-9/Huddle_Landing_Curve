@@ -1,0 +1,29 @@
+/////////////////////////
+/* LOGO */
+/////////////////////////
+
+.logo {
+  @include responsive(phone) {
+    &--header {
+      width: 50%;
+    }
+
+    &__img {
+      &--header {
+        width: 100%;
+      }
+    }
+  }
+
+  @include responsive(sphone) {
+    &--footer {
+      width: 75%;
+    }
+
+    &__img {
+      &--footer {
+        width: 100%;
+      }
+    }
+  }
+}

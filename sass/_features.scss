@@ -1,0 +1,163 @@
+/////////////////////////
+/* FEATURES */
+/////////////////////////
+
+.features {
+  &__curved-box {
+    padding: 2rem 8rem;
+    @include frow;
+    position: relative;
+    background-color: var(--lblue);
+
+    @include responsive(tab-port) {
+      padding: 2rem 7rem;
+    }
+
+    @include responsive(phone) {
+      flex-direction: column;
+      padding: 4rem;
+    }
+
+    &--1 {
+      &::before,
+      &::after {
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100%;
+      }
+
+      &::before {
+        content: "";
+        top: -30%;
+        background-image: url(../img/bg-section-top-desktop-1.svg);
+        background-position: top;
+
+        @include responsive(tab-port) {
+          top: -28%;
+        }
+
+        @include responsive(phone) {
+          background-image: url(../img/bg-section-top-mobile-1.svg);
+          top: -19%;
+        }
+      }
+
+      &::after {
+        content: "";
+        bottom: -25%;
+        background-image: url(../img/bg-section-bottom-desktop-1.svg);
+        background-position: bottom;
+
+        @include responsive(phone) {
+          background-image: url(../img/bg-section-bottom-mobile-1.svg);
+          bottom: -9%;
+        }
+      }
+    }
+
+    &--2 {
+      &::before,
+      &::after {
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100%;
+      }
+
+      &::before {
+        content: "";
+        top: -30%;
+        background-image: url(../img/bg-section-top-desktop-2.svg);
+        background-position: top;
+
+        @include responsive(phone) {
+          background-image: url(../img/bg-section-top-mobile-2.svg);
+          top: -18%;
+        }
+      }
+
+      &::after {
+        content: "";
+        bottom: -25%;
+        background-image: url(../img/bg-section-bottom-desktop-2.svg);
+        background-position: bottom;
+
+        @include responsive(phone) {
+          background-image: url(../img/bg-section-bottom-mobile-2.svg);
+          bottom: -19%;
+        }
+
+        @include responsive(sphone) {
+          bottom: -18%;
+        }
+      }
+    }
+  }
+
+  &__normal-box {
+    padding: 10rem;
+    margin: 15rem 0;
+    @include frow;
+
+    @include responsive(tab-port) {
+      margin: 7rem 0;
+      padding: 7rem 5rem;
+    }
+
+    @include responsive(phone) {
+      flex-direction: column;
+      margin: 15rem 0;
+    }
+  }
+
+  &__text-box,
+  &__img-box {
+    flex: 0 0 46%;
+  }
+
+  &__text-box {
+    @include responsive(phone) {
+      order: 2;
+    }
+  }
+
+  &__img-box {
+    @include responsive(phone) {
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__text {
+    margin-top: 3rem;
+
+    @include responsive(tab-port) {
+      text-align: center;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__offer-box {
+    @include fcolumn;
+    margin: 30rem 0;
+
+    @include responsive(tab-port) {
+      margin: 15rem 0;
+    }
+
+    @include responsive(phone) {
+      margin: 25rem 0;
+    }
+
+    & :first-child {
+      margin-bottom: 5rem;
+    }
+  }
+}
